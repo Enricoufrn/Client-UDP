@@ -19,7 +19,7 @@ public class Main {
             while (running){
                 try {
                     command = scanner.nextLine();
-                    if(command.equalsIgnoreCase(SEND_COMMAND)){
+                    if(command.equalsIgnoreCase(SEND_COMMAND) || command.equalsIgnoreCase(STOP_COMMAND.substring(0,1))){
                         echoClient.send();
                     }else if(command.equalsIgnoreCase(STOP_COMMAND)){
                         running = false;
